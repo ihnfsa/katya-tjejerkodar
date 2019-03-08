@@ -4,6 +4,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin-top: 150px;
+	background-color: #B6AABE;
 }
 
 h1{ 
@@ -11,8 +12,27 @@ h1{
 	font-weight: lighter;
 	letter-spacing: 2px;
 	margin-bottom: 0px;
+	font-family: helvetica;
+	color: white;	
+
 
  }
+ button{ 
+ 	border-radius: 12px;
+ 	background-color: #283747;
+ 	color: white;
+ 	border-color: #283747;
+ 	font-family: helvetica;
+ 	padding: 7px;
+
+  }
+
+  input {
+
+  	border-radius: 10px;
+  	padding: 7px;
+
+  }
 
 .inputSection{
  	margin: 50px 0px 80px 0px;
@@ -30,4 +50,15 @@ h1{
  }
  .addOption{ 
  margin-top: 10px; 
+}
+
+.resultSection {
+
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 35px;	
+	font-family: helvetica;
+	color: white;
 }

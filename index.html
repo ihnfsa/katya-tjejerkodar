@@ -2,32 +2,49 @@
 <html lang="en">
 	<head>	
 		<meta charset="utf-8">
-		<title>Katya Kodar</title>
+		<title>Snaxx boxx</title>
 		<link href="./main.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-		<h1> How to make a choice.. </h1>
+		<h1> What is the best snack in the world? </h1>
 		<div class="inputSection">
 			<div class="inputs">
-			<input placeholder="something"></input>
+			<input placeholder="Add what you think here"></input>
 			</div>
-		<button  class="addOption">add something</button>
+		<button  class="addOption">Add this awesome snack</button>
 		</div>
 		<div class="resultSection"></div>
-		<button>Go!</button>
+		<button class="submit">Find out by clicking here</button>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
 		$(function(){
 			
-			$('.resultSection').hide();
+			$('.resultSection').hide()
 		
 			var add_option = function(){
 
-				$('.inputs').append('<input></input>');
+				$('.inputs').append('<input></input>')
 			}
 
-			$('.addOption').click(add_option);
+			$('.addOption').click(add_option)
+
+			var options = []
+			var submit = function() {
+			$('.inputSection').hide()
+			$('.resultSection').css('display', 'flex')
+
+				$('input').each(function() {
+
+					options.push($(this).val())
+				})
+				var winner = options[Math.floor(Math.random() * options.length)]
+				console.log(winner)
+
+				$('.resultSection').text(winner)
+				
+			}
+			$('.submit').click(submit)	
 
 		})
 
